@@ -24,21 +24,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-'''
-Bored? (y/n) o
-Incorrect entry.
-Bored? (y/n) z
-Incorrect entry.
-Bored? (y/n) m
-Incorrect entry.
-Bored? (y/n) n
-Bored? (y/n) n
-Bored? (y/n) n
-Bored? (y/n) f
-Incorrect entry.
-Bored? (y/n) j
-Incorrect entry.
-Bored? (y/n) y
-Well, let's stop this, then.
-'''

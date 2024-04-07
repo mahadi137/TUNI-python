@@ -27,17 +27,9 @@ def read_inputs():
     total_ball = read_integer("Enter the total number of lottery balls: ")
     total_drawn_ball = read_integer("Enter the number of the drawn balls: ")
 
-    while True:    
-        if not total_ball > 0: 
-            print("The number of balls must be a positive number.")
-            break
-        elif not total_ball > total_drawn_ball:
-            print("At most the total number of balls can be drawn.")
-            break
-        else:
-            pass
-
     return total_ball, total_drawn_ball
+
+    
 
 
 def get_probability(number):
@@ -76,7 +68,7 @@ def probability_calcu(total_ball, total_drawn_ball):
     #formula: a!/(a-p)!.p!
     probability = int(t_ball_prob / (substract_prob * draw_ball_prob))
         
-    return probability
+    print(f"The probability of guessing all {total_drawn_ball} balls correctly is 1/{probability}")
     
 
 
@@ -85,11 +77,22 @@ def probability_calcu(total_ball, total_drawn_ball):
 def main():
     #get total lottery balls
     total_ball, total_drawn_ball = read_inputs()
+    
+    if total_ball < 0: 
+        print("The number of balls must be a positive number.")
+    elif total_ball < total_drawn_ball:
+        print("At most the total number of balls can be drawn.")
+    else:
+        #probability calculation
+        probability_calcu(total_ball, total_drawn_ball)
+    
+    
+    
 
-    #probability calculation
-    probability_of_wining = probability_calcu(total_ball, total_drawn_ball)
+   
+    
 
-    print(f"The probability of guessing all {total_drawn_ball} balls correctly is 1/{probability_of_wining}")
+    
 
 
 

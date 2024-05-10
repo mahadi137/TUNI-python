@@ -8,7 +8,7 @@ def create_an_acronym(name):
     """
     convert the word/name into acronym.
     :parameter name: str.
-    :return word: str.
+    :return ch: str.
     """
     ch = []
     name_list = name.split(" ")

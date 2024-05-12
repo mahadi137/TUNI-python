@@ -18,10 +18,8 @@ def median(text):
                 continue
 
     #comparing the bigger substr
-    max_str = max(ll)
+    return max(ll)
 
-    
-    print(max_str)
 
 
 
